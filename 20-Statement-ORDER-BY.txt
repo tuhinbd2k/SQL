@@ -1,0 +1,26 @@
+1. ORDER BY Syntax
+------------------
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
+
+Example:
+SELECT * FROM Customers
+ORDER BY Country;
+
+3. DESC Example
+---------------
+Example
+SELECT * FROM Customers
+ORDER BY Country DESC;
+
+4. Several Columns Example
+--------------------------
+Example:
+SELECT * FROM Customers
+ORDER BY Country, CustomerName;
+
+Example:
+SELECT * FROM Customers
+ORDER BY Country ASC, CustomerName DESC;
+
