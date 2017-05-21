@@ -1,0 +1,34 @@
+1. TOP
+------
+# SQL Server / MS Access Syntax:
+SQL>
+SELECT TOP number|percent column_name(s)
+FROM table_name
+WHERE condition;
+
+Example:
+SELECT TOP 3 * FROM Customers;
+SELECT TOP 50 PERCENT * FROM Customers;
+SELECT TOP 3 * FROM Customers WHERE Country='Germany';
+
+# MySQL Syntax:
+SQL>
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+
+Example:
+SELECT * FROM Customers LIMIT 3;
+SELECT * FROM Customers WHERE Country='Germany' LIMIT 3;
+
+# Oracle Syntax:
+SQL>
+SELECT column_name(s)
+FROM table_name
+WHERE ROWNUM <= number;
+
+Example:
+SELECT * FROM Customers WHERE ROWNUM <= 3;
+SELECT * FROM Customers WHERE Country='Germany' AND ROWNUM <= 3;
+
