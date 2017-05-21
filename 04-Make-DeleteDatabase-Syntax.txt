@@ -1,0 +1,13 @@
+CREATE DATABASE
+---------------
+SQL> CREATE DATABASE databasename;
+
+Example:
+CREATE DATABASE StudentManagement;
+
+DROP DATABASE
+-------------
+SQL> DROP DATABASE databasename;
+
+Example:
+DROP DATABASE StudentManagement;
