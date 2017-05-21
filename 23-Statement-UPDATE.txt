@@ -1,0 +1,25 @@
+1. UPDATE Syntax
+----------------
+SQL>
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+Example:
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+WHERE CustomerID = 1;
+
+2. UPDATE Multiple Records
+--------------------------
+Example:
+UPDATE Customers
+SET ContactName='Juan'
+WHERE Country='Mexico';
+
+3. UPDATE All Records
+---------------------
+Example:
+UPDATE Customers
+SET ContactName='Juan';
+
