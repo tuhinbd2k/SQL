@@ -1,3 +1,8 @@
+Using LIKE Operator
+-------------------
+% - The percent sign represents zero, one, or multiple characters
+_ - The underscore represents a single character
+
 Operator  Description
 'a%'      Finds any values that starts with "a"
 '%a'      Finds any values that ends with "a"
