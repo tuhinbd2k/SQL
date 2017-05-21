@@ -28,11 +28,14 @@ What Can SQL do?
 
 SQL is a Standard - BUT....
 ---------------------------
-Although SQL is an ANSI (American National Standards Institute) standard, there are different versions of the SQL language.
+Although SQL is an ANSI (American National Standards Institute) standard, there are different
+versions of the SQL language.
 
-However, to be compliant with the ANSI standard, they all support at least the major commands (such as SELECT, UPDATE, DELETE, INSERT, WHERE) in a similar manner.
+However, to be compliant with the ANSI standard, they all support at least the major commands (such
+as SELECT, UPDATE, DELETE, INSERT, WHERE) in a similar manner.
 
-Note: Most of the SQL database programs also have their own proprietary extensions in addition to the SQL standard!
+Note: Most of the SQL database programs also have their own proprietary extensions in addition to
+the SQL standard!
 
 Using SQL in Your Web Site
 --------------------------
@@ -47,9 +50,11 @@ RDBMS
 -----
 RDBMS stands for Relational Database Management System.
 
-RDBMS is the basis for SQL, and for all modern database systems such as MS SQL Server, IBM DB2, Oracle, MySQL, and Microsoft Access.
+RDBMS is the basis for SQL, and for all modern database systems such as MS SQL Server, IBM DB2, 
+Oracle, MySQL, and Microsoft Access.
 
-The data in RDBMS is stored in database objects called tables. A table is a collection of related data entries and it consists of columns and rows.
+The data in RDBMS is stored in database objects called tables. A table is a collection of related
+data entries and it consists of columns and rows.
 
 Look at the "Customers" table:
 
@@ -57,6 +62,10 @@ Example
 -------
 SELECT * FROM Customers;
 
-A record, also called a row, is each individual entry that exists in a table. For example, there are 91 records in the above Customers table. A record is a horizontal entity in a table.
+A record, also called a row, is each individual entry that exists in a table. For example, there 
+are 91 records in the above Customers table. A record is a horizontal entity in a table.
 
-A column is a vertical entity in a table that contains all information associated with a specific field in a table.
+A column is a vertical entity in a table that contains all information associated with a specific
+field in a table.
+
+----- End of File -----
