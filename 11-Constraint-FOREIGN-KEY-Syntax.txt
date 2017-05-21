@@ -1,0 +1,56 @@
+1. FOREIGN KEY by CREATE Command
+--------------------------------
+# MySQL:
+Example:
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+);
+
+# SQL Server / Oracle / MS Access:
+Example:
+CREATE TABLE Orders (
+    OrderID int NOT NULL PRIMARY KEY,
+    OrderNumber int NOT NULL,
+    PersonID int FOREIGN KEY REFERENCES Persons(PersonID)
+);
+
+# MySQL / SQL Server / Oracle / MS Access:
+Example:
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)
+    REFERENCES Persons(PersonID)
+);
+
+2. FOREIGN KEY by ALTER Command
+-------------------------------
+# MySQL / SQL Server / Oracle / MS Access:
+Example:
+ALTER TABLE Orders
+ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+
+# MySQL / SQL Server / Oracle / MS Access:
+Example:
+ALTER TABLE Orders
+ADD CONSTRAINT FK_PersonOrder
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+
+3. DROP FOREIGN KEY
+-------------------
+# MySQL:
+Example:
+ALTER TABLE Orders
+DROP FOREIGN KEY FK_PersonOrder;
+
+# SQL Server / Oracle / MS Access:
+Example:
+ALTER TABLE Orders
+DROP CONSTRAINT FK_PersonOrder;
+
