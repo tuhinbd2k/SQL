@@ -1,0 +1,18 @@
+1. DELETE Syntax
+----------------
+SQL>
+DELETE FROM table_name
+WHERE condition;
+
+Example:
+DELETE FROM Customers
+WHERE CustomerName='Alfreds Futterkiste';
+
+2. Delete All Records
+---------------------
+SQL> DELETE FROM table_name;
+
+or 
+
+SQL> DELETE * FROM table_name;
+
