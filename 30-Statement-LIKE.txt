@@ -1,0 +1,18 @@
+Operator  Description
+'a%'      Finds any values that starts with "a"
+'%a'      Finds any values that ends with "a"
+'%or%'    Finds any values that have "or" in any position
+'_r%'     Finds any values that have "r" in the second position
+'a_%_%'   Finds any values that starts with "a" and are at least 3 characters in length
+'a%o'     Finds any values that starts with "a" and ends with "o"
+
+Example:
+SELECT * FROM Customers WHERE City LIKE 'ber%';
+SELECT * FROM Customers WHERE City LIKE '%es%';
+SELECT * FROM Customers WHERE City LIKE '_erlin';
+SELECT * FROM Customers WHERE City LIKE 'L_n_on';
+SELECT * FROM Customers WHERE City LIKE '[bsp]%';
+SELECT * FROM Customers WHERE City LIKE '[a-c]%';
+SELECT * FROM Customers WHERE City LIKE '[!bsp]%';
+SELECT * FROM Customers WHERE City NOT LIKE '[bsp]%';
+
