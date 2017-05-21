@@ -1,0 +1,19 @@
+1. SELECT DISTINCT Syntax
+-------------------------
+SQL>
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
+
+Example:
+SELECT DISTINCT firstname, lastname
+FROM Student;
+
+Example:
+SELECT COUNT(DISTINCT Country)
+FROM Customers;
+
+
+Example:
+SELECT Count(*) AS DistinctCountries
+FROM (SELECT DISTINCT Country FROM Customers);
+
