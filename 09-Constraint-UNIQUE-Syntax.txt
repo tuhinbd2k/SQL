@@ -1,0 +1,55 @@
+1. UNIQUE by CREATE Command
+---------------------------
+# SQL Server / Oracle / MS Access:
+Example:
+CREATE TABLE Persons (
+    ID int NOT NULL UNIQUE,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+
+# MySQL:
+Example:
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    UNIQUE (ID)
+);
+
+# MySQL / SQL Server / Oracle / MS Access:
+Example:
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    CONSTRAINT UC_Person UNIQUE (ID,LastName)
+);
+
+2. UNIQUE by ALTER Command
+--------------------------
+# MySQL / SQL Server / Oracle / MS Access:
+Example:
+ALTER TABLE Persons
+ADD UNIQUE (ID);
+
+#MySQL / SQL Server / Oracle / MS Access:
+SQL>
+ALTER TABLE Persons
+ADD CONSTRAINT UC_Person UNIQUE (ID,LastName);
+
+2. DROP UNIQUE
+--------------
+# MySQL:
+Example:
+ALTER TABLE Persons
+DROP INDEX UC_Person;
+
+# SQL Server / Oracle / MS Access:
+Example:
+ALTER TABLE Persons
+DROP CONSTRAINT UC_Person;
+
