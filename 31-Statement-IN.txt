@@ -1,0 +1,19 @@
+1. IN Syntax
+------------
+SQL>
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, ...);
+
+or:
+
+SQL>
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (SELECT STATEMENT);
+
+Example: 
+SELECT * FROM Customers WHERE Country IN ('Germany', 'France', 'UK');
+SELECT * FROM Customers WHERE Country NOT IN ('Germany', 'France', 'UK');
+SELECT * FROM Customers WHERE Country IN (SELECT Country FROM Suppliers);
+
