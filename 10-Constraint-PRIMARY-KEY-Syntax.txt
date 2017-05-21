@@ -1,0 +1,55 @@
+1. PRIMARY KEY by CREATE Command
+--------------------------------
+# MySQL:
+Example:
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (ID)
+);
+
+# SQL Server / Oracle / MS Access:
+Example:
+CREATE TABLE Persons (
+    ID int NOT NULL PRIMARY KEY,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+
+# MySQL / SQL Server / Oracle / MS Access:
+Example:
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    CONSTRAINT PK_Person PRIMARY KEY (ID,LastName)
+);
+
+2. PRIMARY KEY by ALTER Command
+--------------------------------
+# MySQL / SQL Server / Oracle / MS Access:
+Example:
+ALTER TABLE Persons
+ADD PRIMARY KEY (ID);
+
+# MySQL / SQL Server / Oracle / MS Access:
+Example:
+ALTER TABLE Persons
+ADD CONSTRAINT PK_Person PRIMARY KEY (ID,LastName);
+
+3. DROP PRIMARY KEY
+-------------------
+# MySQL:
+Example:
+ALTER TABLE Persons
+DROP PRIMARY KEY;
+
+# SQL Server / Oracle / MS Access:
+Example:
+ALTER TABLE Persons
+DROP CONSTRAINT PK_Person;
+
