@@ -1,0 +1,45 @@
+Aliases can be useful when
+--------------------------
+-There are more than one table involved in a query
+-Functions are used in the query
+-Column names are big or not very readable
+-Two or more columns are combined together
+
+1. Alias Column Syntax
+----------------------
+SQL>
+SELECT column_name AS alias_name
+FROM table_name;
+
+Example:
+SELECT CustomerID as ID, CustomerName AS Customer FROM Customers;
+
+2. Alias Table Syntax
+---------------------
+SQL>
+SELECT column_name(s)
+FROM table_name AS alias_name;
+
+Example:
+SELECT CustomerName AS Customer, ContactName AS [Contact Person] FROM Customers;
+
+3. Combine Columns Alias Syntax
+-------------------------------
+Example:
+SELECT CustomerName, Address + ', ' + PostalCode + ' ' + City + ', ' + Country AS Address
+FROM Customers;
+
+SELECT CustomerName, CONCAT(Address,', ',PostalCode,', ',City,', ',Country) AS Address
+FROM Customers;
+
+4. Alias for Tables Syntaxt
+---------------------------
+Example:
+SELECT o.OrderID, o.OrderDate, c.CustomerName
+FROM Customers AS c, Orders AS o
+WHERE c.CustomerName="Around the Horn" AND c.CustomerID=o.CustomerID;
+
+SELECT Orders.OrderID, Orders.OrderDate, Customers.CustomerName
+FROM Customers, Orders
+WHERE Customers.CustomerName="Around the Horn" AND Customers.CustomerID=Orders.CustomerID;
+
