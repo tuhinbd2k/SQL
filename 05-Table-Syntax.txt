@@ -1,0 +1,25 @@
+CREATE TABLE1
+-------------
+SQL> CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+
+Example:
+CREATE TABLE Persons (
+    EmplyeeID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255) 
+);
+
+CREATE TABLE2
+-------------
+new_table_name AS
+    SELECT column1, column2,...
+    FROM existing_table_name
+    WHERE ....;
+
