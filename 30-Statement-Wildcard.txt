@@ -1,3 +1,5 @@
+Using the % Wildcard
+--------------------
 Operator  Description
 'a%'      Finds any values that starts with "a"
 '%a'      Finds any values that ends with "a"
