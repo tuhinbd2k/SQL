@@ -1,0 +1,160 @@
+Data Types for Various DBs
+--------------------------
+
+1. Microsoft Access Data Types:
+-------------------------------
+Data type Description	Storage
+Text        Use for text or combinations of text and numbers. 255 characters maximum	 
+Memo        Memo is used for larger amounts of text. Stores up to 65,536 characters. 
+            Note: You cannot sort a memo field. However, they are searchable	 
+Byte        Allows whole numbers from 0 to 255	1 byte
+Integer     Allows whole numbers between -32,768 and 32,767	2 bytes
+Long        Allows whole numbers between -2,147,483,648 and 2,147,483,647	4 bytes
+Single      Single precision floating-point. Will handle most decimals	4 bytes
+Double      Double precision floating-point. Will handle most decimals	8 bytes
+Currency    Use for currency. Holds up to 15 digits of whole dollars, plus 4 decimal 
+            places. Tip: You can choose which country's currency to use	8 bytes
+AutoNumber  AutoNumber fields automatically give each record its own number, usually 
+            starting at 1	4 bytes
+Date/Time   Use for dates and times	8 bytes
+Yes/No      A logical field can be displayed as Yes/No, True/False, or On/Off. In code,
+            use the constants True and False (equivalent to -1 and 0). Note: Null values
+            are not allowed in Yes/No fields	1 bit
+Ole Object  Can store pictures, audio, video, or other BLOBs (Binary Large OBjects)	up to 1GB
+Hyperlink	  Contain links to other files, including web pages
+
+Lookup Wizard	Let you type a list of options, which can then be chosen from a drop-down list 4 bytes
+
+
+2. MySQL Data Types:
+--------------------
+# Text types:
+Data type         Description
+CHAR(size)        Holds a fixed length string (can contain letters, numbers, and special characters).
+                  The fixed size is specified in parenthesis. Can store up to 255 characters
+VARCHAR(size)     Holds a variable length string (can contain letters, numbers, and special characters).
+                  The maximum size is specified in parenthesis. Can store up to 255 characters.
+                  Note: If you put a greater value than 255 it will be converted to a TEXT type
+TINYTEXT          Holds a string with a maximum length of 255 characters
+TEXT              Holds a string with a maximum length of 65,535 characters
+BLOB              For BLOBs (Binary Large OBjects). Holds up to 65,535 bytes of data
+MEDIUMTEXT        Holds a string with a maximum length of 16,777,215 characters
+MEDIUMBLOB        For BLOBs (Binary Large OBjects). Holds up to 16,777,215 bytes of data
+LONGTEXT          Holds a string with a maximum length of 4,294,967,295 characters
+LONGBLOB          For BLOBs (Binary Large OBjects). Holds up to 4,294,967,295 bytes of data
+ENUM(x,y,z,etc.)  Let you enter a list of possible values. You can list up to 65535 values in an ENUM list.
+                  If a value is inserted that is not in the list, a blank value will be inserted.
+Note: The values are sorted in the order you enter them.
+
+You enter the possible values in this format: ENUM('X','Y','Z')
+SET	Similar to ENUM except that SET may contain up to 64 list items and can store more than one choice
+
+# Number types:
+Data type         Description
+TINYINT(size)     -128 to 127 normal. 0 to 255 UNSIGNED*. The maximum number of digits may be specified
+                  in parenthesis
+SMALLINT(size)    -32768 to 32767 normal. 0 to 65535 UNSIGNED*. The maximum number of digits may be specified
+                  in parenthesis
+MEDIUMINT(size)   -8388608 to 8388607 normal. 0 to 16777215 UNSIGNED*. The maximum number of digits may be
+                  specified in parenthesis
+INT(size)         -2147483648 to 2147483647 normal. 0 to 4294967295 UNSIGNED*. The maximum number of digits
+                  may be specified in parenthesis
+BIGINT(size)      -9223372036854775808 to 9223372036854775807 normal. 0 to 18446744073709551615 UNSIGNED*. 
+                  The maximum number of digits may be specified in parenthesis
+FLOAT(size,d)     A small number with a floating decimal point. The maximum number of digits may be specified
+                  in the size parameter. The maximum number of digits to the right of the decimal point is specified
+                  in the d parameter
+DOUBLE(size,d)    A large number with a floating decimal point. The maximum number of digits may be specified in the
+                  size parameter. The maximum number of digits to the right of the decimal point is specified in the
+                  d parameter
+DECIMAL(size,d)   A DOUBLE stored as a string , allowing for a fixed decimal point. The maximum number of digits may
+                  be specified in the size parameter. The maximum number of digits to the right of the decimal point
+                  is specified in the d parameter
+
+*The integer types have an extra option called UNSIGNED. Normally, the integer goes from an negative to positive value.
+ Adding the UNSIGNED attribute will move that range up so it starts at zero instead of a negative number.
+
+# Date types:
+Data type         Description
+DATE()            A date. Format: YYYY-MM-DD
+                  Note: The supported range is from '1000-01-01' to '9999-12-31'
+DATETIME()        *A date and time combination. Format: YYYY-MM-DD HH:MI:SS
+                  Note: The supported range is from '1000-01-01 00:00:00' to '9999-12-31 23:59:59'
+TIMESTAMP()       *A timestamp. TIMESTAMP values are stored as the number of seconds since the Unix epoch
+                  ('1970-01-01 00:00:00' UTC). Format: YYYY-MM-DD HH:MI:SS
+                  Note: The supported range is from '1970-01-01 00:00:01' UTC to '2038-01-09 03:14:07' UTC
+TIME()            A time. Format: HH:MI:SS
+                  Note: The supported range is from '-838:59:59' to '838:59:59'
+YEAR()            A year in two-digit or four-digit format.
+                  Note: Values allowed in four-digit format: 1901 to 2155. Values allowed in two-digit 
+                  format: 70 to 69, representing years from 1970 to 2069
+
+*Even if DATETIME and TIMESTAMP return the same format, they work very differently. In an INSERT or UPDATE query,
+ the TIMESTAMP automatically set itself to the current date and time. TIMESTAMP also accepts various formats, like
+ YYYYMMDDHHMISS, YYMMDDHHMISS, YYYYMMDD, or YYMMDD.
+
+
+3. SQL Server Data Types
+------------------------
+# String types:
+Data type         Description	Storage
+char(n)           Fixed width character string. Maximum 8,000 characters	Defined width
+varchar(n)        Variable width character string. Maximum 8,000 characters	2 bytes + number of chars
+varchar(max)      Variable width character string. Maximum 1,073,741,824 characters	2 bytes + number of chars
+text              Variable width character string. Maximum 2GB of text data	4 bytes + number of chars
+nchar             Fixed width Unicode string. Maximum 4,000 characters	Defined width x 2
+nvarchar          Variable width Unicode string. Maximum 4,000 characters	 
+nvarchar(max)     Variable width Unicode string. Maximum 536,870,912 characters	 
+ntext             Variable width Unicode string. Maximum 2GB of text data	 
+bit               Allows 0, 1, or NULL	 
+binary(n)         Fixed width binary string. Maximum 8,000 bytes	 
+varbinary         Variable width binary string. Maximum 8,000 bytes	 
+varbinary(max)    Variable width binary string. Maximum 2GB	 
+image             Variable width binary string. Maximum 2GB
+
+# Number types:
+Data type         Description	= Storage
+tinyint           Allows whole numbers from 0 to 255 => 1 byte
+smallint          Allows whole numbers between -32,768 and 32,767 => 2 bytes
+int               Allows whole numbers between -2,147,483,648 and 2,147,483,647 => 4 bytes
+bigint            Allows whole numbers between -9,223,372,036,854,775,808 and 9,223,372,036,854,775,807 => 8 bytes
+decimal(p,s)      Fixed precision and scale numbers.
+                  Allows numbers from -10^38 +1 to 10^38 –1.
+                  The p parameter indicates the maximum total number of digits that can be stored (both to the left
+                  and to the right of the decimal point). p must be a value from 1 to 38. Default is 18.
+                  The s parameter indicates the maximum number of digits stored to the right of the decimal point. 
+                  s must be a value from 0 to p. Default value is 0 => 5-17 bytes
+numeric(p,s)      Fixed precision and scale numbers.
+                  Allows numbers from -10^38 +1 to 10^38 –1.
+                  The p parameter indicates the maximum total number of digits that can be stored (both to the
+                  left and to the right of the decimal point). p must be a value from 1 to 38. Default is 18.
+                  The s parameter indicates the maximum number of digits stored to the right of the decimal point.
+                  s must be a value from 0 to p. Default value is 0 => 5-17 bytes
+smallmoney        Monetary data from -214,748.3648 to 214,748.3647 => 4 bytes
+money             Monetary data from -922,337,203,685,477.5808 to 922,337,203,685,477.5807	8 bytes
+float(n)          Floating precision number data from -1.79E + 308 to 1.79E + 308.
+                  The n parameter indicates whether the field should hold 4 or 8 bytes. float(24) holds
+                  a 4-byte field and float(53) holds an 8-byte field. Default value of n is 53. => 4 or 8 bytes
+real              Floating precision number data from -3.40E + 38 to 3.40E + 38 => 4 bytes
+
+# Date types:
+Data type         Description	Storage
+datetime          From January 1, 1753 to December 31, 9999 with an accuracy of 3.33 milliseconds => 8 bytes
+datetime2         From January 1, 0001 to December 31, 9999 with an accuracy of 100 nanoseconds => 6-8 bytes
+smalldatetime     From January 1, 1900 to June 6, 2079 with an accuracy of 1 minute => 4 bytes
+date              Store a date only. From January 1, 0001 to December 31, 9999 => 3 bytes
+time              Store a time only to an accuracy of 100 nanoseconds => 3-5 bytes
+datetimeoffset    The same as datetime2 with the addition of a time zone offset => 8-10 bytes
+timestamp         Stores a unique number that gets updated every time a row gets created or modified.
+                  The timestamp value is based upon an internal clock and does not correspond to real time.
+                  Each table may have only one timestamp variable	 
+
+# Other data types:
+Data type         Description
+sql_variant       Stores up to 8,000 bytes of data of various data types, except text, ntext, and timestamp
+uniqueidentifier  Stores a globally unique identifier (GUID)
+xml               Stores XML formatted data. Maximum 2GB
+cursor            Stores a reference to a cursor used for database operations
+table             Stores a result-set for later processing
+
+----- end of file -----
