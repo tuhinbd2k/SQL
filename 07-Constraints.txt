@@ -15,3 +15,16 @@ The following constraints are commonly used in SQL:
 -CHECK         - Ensures that all values in a column satisfies a specific condition
 -DEFAULT       - Sets a default value for a column when no value is specified
 -INDEX         - Use to create and retrieve data from the database very quickly
+
+
+SQL Create Constraints
+Constraints can be specified when the table is created with the CREATE TABLE statement, or after the table is created with the ALTER TABLE statement.
+
+SQL>
+CREATE TABLE table_name (
+    column1 datatype constraint,
+    column2 datatype constraint,
+    column3 datatype constraint,
+    ....
+);
+
