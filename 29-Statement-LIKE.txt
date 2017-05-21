@@ -1,0 +1,24 @@
+Operator  Description
+'a%'      Finds any values that starts with "a"
+'%a'      Finds any values that ends with "a"
+'%or%'    Finds any values that have "or" in any position
+'_r%'     Finds any values that have "r" in the second position
+'a_%_%'   Finds any values that starts with "a" and are at least 3 characters in length
+'a%o'     Finds any values that starts with "a" and ends with "o"
+
+1. LIKE Syntax
+--------------
+SQL>
+SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern;
+
+Example:
+SELECT * FROM Customers WHERE CustomerName LIKE 'a%';
+SELECT * FROM Customers WHERE CustomerName LIKE '%a';
+SELECT * FROM Customers WHERE CustomerName LIKE '%or%';
+SELECT * FROM Customers WHERE CustomerName LIKE '_r%';
+SELECT * FROM Customers WHERE CustomerName LIKE 'a_%_%';
+SELECT * FROM Customers WHERE ContactName LIKE 'a%o';
+SELECT * FROM Customers WHERE CustomerName NOT LIKE 'a%';
+
