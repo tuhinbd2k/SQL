@@ -1,0 +1,17 @@
+1. SELECT a List of Columns
+---------------------------
+SQL>
+SELECT column1, column2, ...
+FROM table_name;
+
+Example:
+SELECT CustomerName, City FROM Customers;
+
+2. SELECT All Columns
+---------------------
+SQL>
+SELECT * FROM table_name;
+
+Example:
+SELECT * FROM Customers;
+
