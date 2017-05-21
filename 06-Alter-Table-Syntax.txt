@@ -1,0 +1,33 @@
+ALTER TABLE
+-----------
+The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+
+The ALTER TABLE statement is also used to add and drop various constraints on an existing table.
+
+1. ADD Column
+-------------
+SQL> ALTER TABLE table_name ADD column_name datatype;
+
+Example:
+ALTER TABLE Persons ADD DateOfBirth date;
+
+2. DROP COLUMN
+-------------
+SQL> ALTER TABLE table_name DROP COLUMN column_name;
+
+Example:
+ALTER TABLE Persons DROP COLUMN DateOfBirth;
+
+3. ALTER/MODIFY COLUMN
+----------------------
+SQL Server / MS Access:
+SQL> ALTER TABLE table_name ALTER COLUMN column_name datatype;
+
+My SQL / Oracle (prior version 10G):
+SQL> ALTER TABLE table_name MODIFY COLUMN column_name datatype;
+
+Oracle 10G and later:
+SQL> ALTER TABLE table_name MODIFY column_name datatype;
+
+Example:
+ALTER TABLE Persons ALTER COLUMN DateOfBirth year;
