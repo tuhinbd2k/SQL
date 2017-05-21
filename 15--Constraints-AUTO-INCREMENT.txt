@@ -1,0 +1,41 @@
+1. AUTO INCREMENT by CREATE Command
+-----------------------------------
+# MySQL
+Example:
+CREATE TABLE Persons (
+    ID int NOT NULL AUTO_INCREMENT,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (ID)
+);
+
+# MySQL
+Example:
+ALTER TABLE Persons AUTO_INCREMENT=100;
+
+Example:
+CREATE TABLE Persons (
+    ID int IDENTITY(1,1) PRIMARY KEY,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+
+# Syntax for Access
+Example:
+CREATE TABLE Persons (
+    ID Integer PRIMARY KEY AUTOINCREMENT,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+
+# Syntax for Oracle
+Example:
+CREATE SEQUENCE seq_person
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+
