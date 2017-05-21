@@ -1,0 +1,22 @@
+1. MIN() Functions
+------------------
+SQL>
+MIN() Syntax
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+
+Example:
+SELECT MIN(Price) AS SmallestPrice FROM Products;
+
+2. MAX() Functions
+------------------
+SQL>
+MAX() Syntax
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+
+Example:
+SELECT MAX(Price) AS LargestPrice FROM Products;
+
