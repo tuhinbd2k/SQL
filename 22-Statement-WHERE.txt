@@ -1,0 +1,29 @@
+What is a NULL Value?
+---------------------
+A field with a NULL value is a field with no value.
+
+Note: It is very important to understand that a NULL value is different from a zero value
+or a field that contains spaces. A field with a NULL value is one that has been left blank
+during record creation!
+
+1. IS NULL Syntax
+-----------------
+SQL>
+SELECT column_names
+FROM table_name
+WHERE column_name IS NULL;
+
+Example:
+SELECT LastName, FirstName, Address FROM Persons
+WHERE Address IS NULL;
+
+2. IS NOT NULL Syntax
+---------------------
+SELECT column_names
+FROM table_name
+WHERE column_name IS NOT NULL;
+
+Example:
+SELECT LastName, FirstName, Address FROM Persons
+WHERE Address IS NOT NULL;
+
