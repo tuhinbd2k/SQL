@@ -23,3 +23,20 @@ new_table_name AS
     FROM existing_table_name
     WHERE ....;
 
+
+
+DROP TABLE
+----------
+SQL> DROP TABLE table_name;
+
+Example:
+DROP TABLE Student;
+
+TRUNCATE TABLE
+--------------
+The TRUNCATE TABLE statement is used to delete the data inside a table, but not the table itself.
+
+SQL> TRUNCATE TABLE table_name;
+
+Example:
+TRUNCATE TABLE Student_Extra;
