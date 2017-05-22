@@ -1,0 +1,25 @@
+GROUP BY Syntax
+---------------
+SQL>
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);
+
+Example:
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country;
+
+Example:
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+ORDER BY COUNT(CustomerID) DESC;
+
+Example:
+SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
+LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+GROUP BY ShipperName;
+
