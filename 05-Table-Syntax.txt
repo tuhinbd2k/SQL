@@ -1,5 +1,5 @@
-CREATE TABLE1
--------------
+1. Create a Table1
+------------------
 SQL> CREATE TABLE table_name (
     column1 datatype,
     column2 datatype,
@@ -16,8 +16,8 @@ CREATE TABLE Persons (
     City varchar(255) 
 );
 
-CREATE TABLE2
--------------
+2. Create a Table2
+------------------
 new_table_name AS
     SELECT column1, column2,...
     FROM existing_table_name
@@ -25,18 +25,23 @@ new_table_name AS
 
 
 
-DROP TABLE
-----------
+3. Delete a Table
+-----------------
 SQL> DROP TABLE table_name;
 
 Example:
 DROP TABLE Student;
 
-TRUNCATE TABLE
---------------
+4. Delete all Data from a Table
+-------------------------------
 The TRUNCATE TABLE statement is used to delete the data inside a table, but not the table itself.
 
 SQL> TRUNCATE TABLE table_name;
 
 Example:
 TRUNCATE TABLE Student_Extra;
+
+5. Display Structure of a Table
+-------------------------------
+SQL> DESC tablename;
+SQL> SHOW COLUMNS FROM table;
