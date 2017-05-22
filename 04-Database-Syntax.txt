@@ -1,13 +1,22 @@
-CREATE DATABASE
----------------
+1. Create New DATABASE
+----------------------
 SQL> CREATE DATABASE databasename;
 
 Example:
 CREATE DATABASE StudentManagement;
 
-DROP DATABASE
--------------
+2. Delete a DATABASE
+--------------------
 SQL> DROP DATABASE databasename;
 
 Example:
 DROP DATABASE StudentManagement;
+
+3. Display All DATABASES
+------------------------
+SQL> SHOW DATABASES;
+
+4. Use a DATABASE
+-----------------
+SQL> USE database;
+
