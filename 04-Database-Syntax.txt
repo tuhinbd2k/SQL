@@ -1,6 +1,7 @@
 1. Create New DATABASE
 ----------------------
 SQL> CREATE DATABASE databasename;
+SQL> CREATE DATABASE IF NOT EXISTS databaseName;
 
 Example:
 CREATE DATABASE StudentManagement;
@@ -8,6 +9,7 @@ CREATE DATABASE StudentManagement;
 2. Delete a DATABASE
 --------------------
 SQL> DROP DATABASE databasename;
+SQL> DROP DATABASE IF EXISTS databaseName;
 
 Example:
 DROP DATABASE StudentManagement;
@@ -16,7 +18,11 @@ DROP DATABASE StudentManagement;
 ------------------------
 SQL> SHOW DATABASES;
 
-4. Use a DATABASE
+4. Show the Default Database
+----------------------------
+SQL> SELECT DATABASE();
+
+5. Use a DATABASE
 -----------------
 SQL> USE database;
 
